@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bqkh1167skhl4"]
+
+[ext_resource type="Script" uid="uid://dxrkgjj17acpj" path="res://rider.gd" id="1_81cer"]
+[ext_resource type="Texture2D" uid="uid://m306lwiln27i" path="res://libre_edited.png" id="1_bp43r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m1lb6"]
+radius = 20.09975
+
+[node name="Rider" type="RigidBody2D" unique_id=695170866]
+script = ExtResource("1_81cer")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=311139332]
+position = Vector2(97.125, -375.125)
+scale = Vector2(0.09309133, 0.09309133)
+texture = ExtResource("1_bp43r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1997932505]
+position = Vector2(97, -375)
+shape = SubResource("CircleShape2D_m1lb6")
