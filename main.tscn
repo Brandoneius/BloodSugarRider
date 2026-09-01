@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://b5km2vfnbctpt"]
 
+[ext_resource type="Script" uid="uid://cuh3i25i8kpj7" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="Script" uid="uid://dapfxguey6fq1" path="res://track.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://bqkh1167skhl4" path="res://rider.tscn" id="2_0xm2m"]
 
 [node name="main" type="Node2D" unique_id=348789452]
+script = ExtResource("1_h2yge")
 
 [node name="Track" type="Node2D" parent="." unique_id=1271496739]
 script = ExtResource("1_ig7tw")
@@ -11,13 +13,16 @@ script = ExtResource("1_ig7tw")
 [node name="StaticBody2D" type="StaticBody2D" parent="Track" unique_id=2073803960]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Track/StaticBody2D" unique_id=78766636]
+modulate = Color(1, 1, 1, 0)
+top_level = true
 build_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2101772061]
-position = Vector2(430, -180)
+position = Vector2(432, -50)
 zoom = Vector2(1.33, 1.33)
 
 [node name="Rider" parent="." unique_id=695170866 instance=ExtResource("2_0xm2m")]
+position = Vector2(137, 413)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1312810042]
 
@@ -28,7 +33,7 @@ offset_right = 205.0
 offset_bottom = 55.0
 text = "Load Dexcom CGM Data"
 
-[node name="FileDialog" type="FileDialog" parent="CanvasLayer/Button" unique_id=1870958081]
+[node name="FileDialog" type="FileDialog" parent="CanvasLayer" unique_id=1870958081]
 title = "Open a File"
 file_mode = 0
 filters = PackedStringArray("*.csv")
