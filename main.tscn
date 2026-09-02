@@ -17,12 +17,13 @@ modulate = Color(1, 1, 1, 0)
 top_level = true
 build_mode = 1
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2101772061]
-position = Vector2(432, -50)
-zoom = Vector2(1.33, 1.33)
-
 [node name="Rider" parent="." unique_id=695170866 instance=ExtResource("2_0xm2m")]
-position = Vector2(137, 413)
+position = Vector2(-91, 366)
+
+[node name="Camera2D" type="Camera2D" parent="Rider" unique_id=2101772061]
+position = Vector2(91, -366)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1312810042]
 
