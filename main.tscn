@@ -22,10 +22,23 @@ position = Vector2(-91, 366)
 
 [node name="Camera2D" type="Camera2D" parent="Rider" unique_id=2101772061]
 position = Vector2(91, -366)
+zoom = Vector2(0.8, 0.8)
 position_smoothing_enabled = true
+position_smoothing_speed = 3.0
 rotation_smoothing_enabled = true
+rotation_smoothing_speed = 1.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1312810042]
+
+[node name="BoostLabel" type="Label" parent="CanvasLayer" unique_id=178934760]
+offset_left = 2.0
+offset_top = -5.0
+offset_right = 234.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 40
+text = "Gummies :"
 
 [node name="Button" type="Button" parent="CanvasLayer" unique_id=745601366]
 offset_left = 10.0

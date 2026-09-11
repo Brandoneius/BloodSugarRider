@@ -7,14 +7,14 @@ func build_from_data(readings: Array) -> void:
 	var x := 0.0
 	for reading in readings:
 		var glucose: float = reading["value"]
-		var y := -(glucose - 120.0) * 6
+		var y := -(glucose - 120.0) * 5
 		points.append(Vector2(x, y))
 		x += 40.0
 
 	var line := Line2D.new()
 	line.points = points
 	line.width = 6.0
-	line.default_color = Color(0.85, 0.15, 0.25)
+	line.default_color = Color(0,0,0)
 	add_child(line)
 
 	var collider := $StaticBody2D/CollisionPolygon2D
