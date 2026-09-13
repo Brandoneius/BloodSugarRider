@@ -29,6 +29,10 @@ func try_player_boost(direction: Vector2) -> void:
 	boost_charges_changed.emit(boost_charges)
 	apply_boost(direction, boost_force)
 	
+func add_boost_charge() -> void:
+	boost_charges += 1
+	boost_charges_changed.emit(boost_charges)
+	
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("boost_up"):
 		try_player_boost(Vector2.UP)

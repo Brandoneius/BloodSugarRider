@@ -5,6 +5,7 @@ extends Node2D
 @onready var load_button := $CanvasLayer/Button
 @onready var file_dialog := $CanvasLayer/FileDialog
 @onready var boost_label := $CanvasLayer/BoostLabel
+@onready var gummy_spawner := $GummySpawner
 
 func _ready() -> void:
 	load_button.pressed.connect(_on_load_button_pressed)
@@ -28,6 +29,7 @@ func _on_file_selected(path: String) -> void:
 	rider.freeze = false         # <-- NEW: now let it go
 	load_button.visible = false
 	boost_label.visible = true
+	gummy_spawner.spawn_along_track(track.points)
 
 	
 func _on_boost_charges_changed(charges: int) -> void:

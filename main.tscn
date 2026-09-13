@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cuh3i25i8kpj7" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="Script" uid="uid://dapfxguey6fq1" path="res://track.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://bqkh1167skhl4" path="res://rider.tscn" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://ctj8u08ydbrum" path="res://gummy_spawner.gd" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://nqcn3kg8k3ys" path="res://gummybag.tscn" id="5_lquwl"]
 
 [node name="main" type="Node2D" unique_id=348789452]
 script = ExtResource("1_h2yge")
@@ -21,7 +23,6 @@ build_mode = 1
 position = Vector2(-91, 366)
 
 [node name="Camera2D" type="Camera2D" parent="Rider" unique_id=2101772061]
-position = Vector2(91, -366)
 zoom = Vector2(0.8, 0.8)
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
@@ -51,3 +52,7 @@ text = "Load Dexcom CGM Data"
 title = "Open a File"
 file_mode = 0
 filters = PackedStringArray("*.csv")
+
+[node name="GummySpawner" type="Node2D" parent="." unique_id=50759632]
+script = ExtResource("4_1bvp3")
+gummy_bag_scene = ExtResource("5_lquwl")
